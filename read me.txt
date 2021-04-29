@@ -1,0 +1,16 @@
+This package contains the code of methods used in the paper
+gmmSel function:
+    GMM-BIC method, y is n*p (p is dimension)
+gmm_EstSel: 
+    GMM penalty method, y is n*p
+ep_EstSel_bic:
+    EP BIC, y is n*p
+ep_EstSe1: 
+    EP penalty, y is n*p
+EP0:
+     In EP0 method file, EM_PMoEP, y is 1*n
+gmrm_EstSel:
+    PGMR
+epr_EstSel:
+    MEPR
+
