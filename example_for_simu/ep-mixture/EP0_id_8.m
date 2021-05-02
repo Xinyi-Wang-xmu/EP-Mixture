@@ -1,4 +1,4 @@
-% EP0 method for model 5 (as an example)
+% EP0 method for model 8 (as an example)
 tic;
 clear all;clc;
 addpath(genpath(pwd));
@@ -6,11 +6,12 @@ s = RandStream('mt19937ar','Seed', 5489);
 RandStream.setGlobalStream(s);
 for i=1:100
     i
-    prop=[0.5,0.5];
+    ymean=[-3,1,3];
+    ysigma=[0.25,4,0.125];
+    prop=[0.4,0.3,0.3];
     n=300;
-    ymean=[0,0]; 
-    sigmap=[1.7472,0.8736];%(2*0.25^1.5/3)^(1/3)
-    p0=[3,3];
+    sigmap=[0.4368,1.7472,0.3089];%[(2*0.25^1.5/3)^(1/3),,]
+    p0=[3,3,3];
     k0=length(prop);
     y = [];
 for m = 1:(k0-1);
@@ -61,7 +62,7 @@ kk(i)=k;
 
 end
 
-save Simu3_caoeppenalty_3001005 kk
+save Simu3_caoeppenalty_3001008 kk
 
 toc;
 
@@ -73,11 +74,12 @@ s = RandStream('mt19937ar','Seed', 5489);
 RandStream.setGlobalStream(s);
 for i=1:100
     i
-     prop=[0.5,0.5];
+    ymean=[-3,1,3];
+    ysigma=[0.25,4,0.125];
+    prop=[0.4,0.3,0.3];
     n=600;
-    ymean=[0,0]; 
-    sigmap=[1.7472,0.8736];%(2*0.25^1.5/3)^(1/3)
-    p0=[3,3];
+    sigmap=[0.4368,1.7472,0.3089];%(2*0.25^1.5/3)^(1/3)
+    p0=[3,3,3];
     k0=length(prop);
     y = [];
 for m = 1:(k0-1);
@@ -127,7 +129,7 @@ kk(i)=k;
 
 end
 
-save Simu3_caoeppenalty_6001005 kk
+save Simu3_caoeppenalty_6001008 kk
 
 toc;
 
@@ -139,11 +141,12 @@ s = RandStream('mt19937ar','Seed', 5489);
 RandStream.setGlobalStream(s);
 for i=1:100
     i
-     prop=[0.5,0.5];
+    ymean=[-3,1,3];
+    ysigma=[0.25,4,0.125];
+    prop=[0.4,0.3,0.3];
     n=1000;
-    ymean=[0,0]; 
-    sigmap=[1.7472,0.8736];%(2*0.25^1.5/3)^(1/3)
-    p0=[3,3];
+    sigmap=[0.4368,1.7472,0.3089];%(2*0.25^1.5/3)^(1/3)
+    p0=[3,3,3];
     k0=length(prop);
     y = [];
 for m = 1:(k0-1);
@@ -193,6 +196,6 @@ kk(i)=k;
 
 end
 
-save Simu3_caoeppenalty_10001005 kk
+save Simu3_caoeppenalty_10001008 kk
 
 toc;
