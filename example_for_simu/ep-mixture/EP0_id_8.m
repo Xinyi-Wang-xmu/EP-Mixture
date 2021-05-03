@@ -10,7 +10,7 @@ for i=1:100
     ysigma=[0.25,4,0.125];
     prop=[0.4,0.3,0.3];
     n=300;
-    sigmap=[0.4368,1.7472,0.3089];%[(2*0.25^1.5/3)^(1/3),,]
+    sigmap=(2*ysigma.^1.5/3).^(1/3); %[0.4368,1.7472,0.3089];%[(2*0.25^1.5/3)^(1/3),,]
     p0=[3,3,3];
     k0=length(prop);
     y = [];
@@ -59,10 +59,14 @@ end
 k=length(model_max.Pi);
 
 kk(i)=k;
+propo(i,1:k)=model_max.Pi;
+eta(1:k,i)=model_max.eta;
+lambda0(i)=lambda_max;
+BIC(i)=BIC_max;
 
 end
 
-save Simu3_caoeppenalty_3001008 kk
+save Simu3_caoeppenalty_3001008 kk propo eta lambda0 BIC
 
 toc;
 
@@ -78,7 +82,7 @@ for i=1:100
     ysigma=[0.25,4,0.125];
     prop=[0.4,0.3,0.3];
     n=600;
-    sigmap=[0.4368,1.7472,0.3089];%(2*0.25^1.5/3)^(1/3)
+     sigmap=(2*ysigma.^1.5/3).^(1/3);%[0.4368,1.7472,0.3089];%(2*0.25^1.5/3)^(1/3)
     p0=[3,3,3];
     k0=length(prop);
     y = [];
@@ -126,10 +130,13 @@ end
 k=length(model_max.Pi);
 
 kk(i)=k;
-
+propo(i,1:k)=model_max.Pi;
+eta(1:k,i)=model_max.eta;
+lambda0(i)=lambda_max;
+BIC(i)=BIC_max;
 end
 
-save Simu3_caoeppenalty_6001008 kk
+save Simu3_caoeppenalty_6001008 kk propo eta lambda0 BIC
 
 toc;
 
@@ -145,7 +152,7 @@ for i=1:100
     ysigma=[0.25,4,0.125];
     prop=[0.4,0.3,0.3];
     n=1000;
-    sigmap=[0.4368,1.7472,0.3089];%(2*0.25^1.5/3)^(1/3)
+     sigmap=(2*ysigma.^1.5/3).^(1/3);%(2*0.25^1.5/3)^(1/3)
     p0=[3,3,3];
     k0=length(prop);
     y = [];
@@ -193,9 +200,12 @@ end
 
 k=length(model_max.Pi);
 kk(i)=k;
-
+propo(i,1:k)=model_max.Pi;
+eta(1:k,i)=model_max.eta;
+lambda0(i)=lambda_max;
+BIC(i)=BIC_max;
 end
 
-save Simu3_caoeppenalty_10001008 kk
+save Simu3_caoeppenalty_10001008 kk propo eta lambda0 BIC
 
 toc;
